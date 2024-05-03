@@ -1,0 +1,24 @@
+These scripts allow you to iteract easily with jser files via command line. The general structure of a command is as follows:
+
+=./cli.py <subcommand> <jser filepath>=
+
+Adding a symlink in a directory in your path pointing to this repo's ~cli.py~ means you can use the command across your system. For example:
+
+=/dir/in/path/kh-cli -> /path/to/kh-jser-cli/cli.py=
+
+Will allow you to to use the command =kh-cli= on your system.
+
+** Examples:
+
+*** List all objects in a series:
+
+#+BEGIN_SRC shell
+kh-cli objects /path/to/my_series.jser  # prints a list of objects in the series
+#+END_SRC
+
+*** List all alignments in a series:
+
+#+BEGIN_SRC shell
+kh-cli alignments /path/to/my_series.jser  # current alignment denoted by a *
+#+END_SRC
+
