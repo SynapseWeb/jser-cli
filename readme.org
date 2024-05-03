@@ -2,11 +2,15 @@ These scripts allow you to iteract easily with jser files via command line. The 
 
 =jser-cli/cli.py <subcommand> <jser filepath>=
 
-Adding a symlink in a directory in your path pointing to this repo's ~cli.py~ means you can use the command across your system. For example:
+Adding a symlink in a directory in your path pointing to this ~jser-cli/cli.py~ means you can use the command across your system (assuming the ~cli.py~ file is executable).
 
-=/dir/in/path/jser -> /path/to/jser-cli/cli.py=
+For example:
 
-Will allow you to to use the command =kh-cli= on your system.
+#+BEGIN_SRC shell
+ln -s /path/to/jser-cli/cli.py /dir/in/path/jser
+#+END_SRC
+
+Will allow you to to use the command =jser= on your system.
 
 ** Examples:
 
@@ -14,6 +18,6 @@ Will allow you to to use the command =kh-cli= on your system.
 jser objects /path/to/my_series.jser     # prints a list of objects in the series
 jser alignments /path/to/my_series.jser  # current alignment denoted by a *
 jser groups /path/to/my_series.jser      # prints a list of groups
-jser src_dir /path/to/my_series.jser       # print the src_dir (the image directory)
+jser src_dir /path/to/my_series.jser     # print the src_dir (the series image directory)
 #+END_SRC
 
