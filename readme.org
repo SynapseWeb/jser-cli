@@ -7,7 +7,8 @@ Adding a symlink in a directory in your path pointing to this ~jser-cli/cli.py~ 
 For example:
 
 #+BEGIN_SRC shell
-ln -s /path/to/jser-cli/cli.py /dir/in/path/jser
+chmod u+x /path/to/jser-cli/cli.py                # make cli.py executable to user
+ln -s /path/to/jser-cli/cli.py /dir/in/path/jser  # symlink from a folder in path variable
 #+END_SRC
 
 Will allow you to to use the command =jser= on your system.
