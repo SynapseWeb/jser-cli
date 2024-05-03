@@ -26,6 +26,7 @@ def print_objects(data):
     for obj in objects:
         print(obj)
 
+
 def print_alignments(data):
 
     current_alignment = data["series"]["alignment"]
@@ -37,3 +38,12 @@ def print_alignments(data):
 
     for alignment in alignments:
         print(alignment)
+
+
+def print_groups(data):
+
+    groups = list(data["series"]["object_groups"].keys())
+    groups.sort()
+
+    for group in groups:
+        print(group)

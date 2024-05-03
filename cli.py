@@ -54,6 +54,10 @@ if __name__ == "__main__":
 
             print_alignments(data)
 
+        case "groups":
+
+            print_groups(data)
+
         case "test":
             
             print("test!")
