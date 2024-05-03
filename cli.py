@@ -9,13 +9,17 @@ def print_example():
 
     print("Example call: kh-cli <subcommand> <jser file>")
     
-def print_usage():
-    
-    print(f"KH lab jser cli: {__doc__}")
-    print_example()
-
 def print_subcommands():
+
     print("Possible subcommands include: objects, alignments, add-to-group, test")
+
+def print_usage():
+
+    print(f"KH lab jser cli: {__doc__}")
+    print()
+    print_example()
+    print()
+    print_subcommands()
 
 if __name__ == "__main__":
 
