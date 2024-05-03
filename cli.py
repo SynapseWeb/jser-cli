@@ -15,7 +15,7 @@ def print_usage():
     print_example()
 
 def print_subcommands():
-    print("Possible subcommands include: objects, alignments, test")
+    print("Possible subcommands include: objects, alignments, add-to-group, test")
 
 if __name__ == "__main__":
 
@@ -58,6 +58,12 @@ if __name__ == "__main__":
 
             print_groups(data)
 
+        case "add-to-group":
+
+            group = args[3]
+            objs = args[4:]
+            add_to_groups(data, group, objs)
+        
         case "src_dir":
 
             print_src_dir(data)

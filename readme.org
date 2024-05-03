@@ -16,9 +16,13 @@ Will allow you to to use the command =jser= on your system.
 ** Examples:
 
 #+BEGIN_SRC shell
-jser objects /path/to/my_series.jser     # prints a list of objects in the series
-jser alignments /path/to/my_series.jser  # current alignment denoted by a *
-jser groups /path/to/my_series.jser      # prints a list of groups
-jser src_dir /path/to/my_series.jser     # print the src_dir (the series image directory)
+jser objects /path/to/my_series.jser       # prints a list of objects in the series
+jser alignments /path/to/my_series.jser    # current alignment denoted by a *
+jser groups /path/to/my_series.jser        # prints a list of groups
+jser src_dir /path/to/my_series.jser       # print the src_dir (the series image directory)
+
+# add obj_1, obj_2, and obj_3 to new_group
+# store returned json object in new_series.jser
+jser add-to-group /path/to/my_series.jser new_group obj_1 obj_2 obj_3 > new_series.jser
 #+END_SRC
 

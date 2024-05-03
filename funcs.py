@@ -48,6 +48,27 @@ def print_groups(data):
     for group in groups:
         print(group)
 
+
+def add_to_groups(data, group, objs):
+
+    obj_groups = data["series"]["object_groups"]
+    existing = obj_groups.get(group, None)
+    
+    if not existing:
+        
+        data["series"]["object_groups"][group] = objs
+        
+    else:
+        
+        new_objs = set(existing)
+
+        for obj in objs:
+            new_objs.add(obj)
+            
+        data["series"]["object_groups"][group] = new_objs
+
+    print(json.dumps(data))
+
         
 def print_src_dir(data):
 
