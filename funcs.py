@@ -47,3 +47,9 @@ def print_groups(data):
 
     for group in groups:
         print(group)
+
+        
+def print_src_dir(data):
+
+    src_dir = data["series"]["src_dir"]
+    print(src_dir)

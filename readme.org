@@ -10,15 +10,10 @@ Will allow you to to use the command =kh-cli= on your system.
 
 ** Examples:
 
-*** List all objects in a series:
-
 #+BEGIN_SRC shell
-jser objects /path/to/my_series.jser  # prints a list of objects in the series
-#+END_SRC
-
-*** List all alignments in a series:
-
-#+BEGIN_SRC shell
+jser objects /path/to/my_series.jser     # prints a list of objects in the series
 jser alignments /path/to/my_series.jser  # current alignment denoted by a *
+jser groups /path/to/my_series.jser      # prints a list of groups
+jser src_dir /path/to/my_series.jser       # print the src_dir (the image directory)
 #+END_SRC
 

@@ -58,6 +58,10 @@ if __name__ == "__main__":
 
             print_groups(data)
 
+        case "src_dir":
+
+            print_src_dir(data)
+
         case "test":
             
             print("test!")
