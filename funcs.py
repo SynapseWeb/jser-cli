@@ -2,8 +2,45 @@
 
 
 import json
+from pathlib import Path
 
 
+## Functions to print help #########################################################################
+
+
+def print_example():
+
+    print("Example call: jser <subcommand> <jser file>")
+    
+
+def print_jser_subcommands():
+
+    print("Possible subcommands include: objects, alignments, add-to-group, test")
+
+
+def print_dir_subcommands():
+
+    print("Possible subcommands include: recent")
+
+
+def print_usage():
+
+    print(f"KH lab jser cli: {__doc__}")
+    print()
+    print_example()
+
+
+## Functions to return dir data ####################################################################
+
+
+def get_recent_jser(directory: Path):
+
+    jsers = sorted(directory.glob("traces/*.jser"))
+    print(jsers[-1])
+    
+
+## Functions to return jser data ###################################################################
+    
 def load_jser(filepath):
 
     with open(filepath, "r") as fp:
