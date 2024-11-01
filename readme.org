@@ -1,19 +1,19 @@
-These scripts allow you to iteract easily with jser files via command line. The general structure of a command is as follows:
+These scripts allow you to iteract with jser files from the command line. The general structure of a command is:
 
 =jser-cli/cli.py <subcommand> <jser filepath>=
 
-Adding a symlink in a directory in your path pointing to this ~jser-cli/cli.py~ means you can use the command across your system (assuming the ~cli.py~ file is executable).
+Adding a symlink in a directory in your path pointing to ~jser-cli/cli.py~ will allow you to access =jser= across your system (assuming the ~cli.py~ file is executable).
 
 For example:
 
 #+BEGIN_SRC shell
 chmod u+x /path/to/jser-cli/cli.py                # make cli.py executable to user
-ln -s /path/to/jser-cli/cli.py /dir/in/path/jser  # symlink from a folder in path variable
+ln -s /path/to/jser-cli/cli.py /dir/in/path/jser  # symlink from a folder in path
 #+END_SRC
 
 Will allow you to to use the command =jser= on your system.
 
-** Examples:
+** Examples
 
 #+BEGIN_SRC shell
 jser objects /path/to/my_series.jser       # prints a list of objects in the series
